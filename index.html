@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home default || Inbio - Personal Portfolio Bootstrap-5 Template </title>
+  <link href="css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <script src="js/bootstrap.bundle.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="customcss/style.css">
+</head>
+
+<body>
+
+  <!-- <div class="row">
+    <div class="col-md-6 col-sm-12 col-12"></div>
+    <div class="col-md-6 col-sm-12 col-12"></div>
+  </div> -->
+
+
+  <nav class="navbar navbar-expand-lg flex sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="media/logo-dark (1).png" alt="Logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="d-flex">
+          <div class="offcanvas-header d-block">
+            <div><a class="offcanvas-header navbar-brand" href="#"><img src="media/logo-dark (1).png" alt="Logo"></a>
+            </div>
+            <h5 class="offcanvas-header offcanvas-title" id="offcanvasNavbarLabel">Inbio is a personal portfolio
+              template. You can customize all.</h5>
+          </div>
+          <div class="offcanvas-header close-btn"><button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+              aria-label="Close"></button></div>
+        </div>
+
+        <hr class="offcanvas-header mb-5">
+
+        <div class="offcanvas-body ml-space">
+          <ul class="navbar-nav  mrgin-lft mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link mx-3 active" aria-current="page" href="#">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="#features">FEATURES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="#">PORTFOLIO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="#">RESUME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="#">CLIENTS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="#">PRICING</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="#">BLOG</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="#">CONTACT</a>
+            </li>
+            <form class="d-flex">
+              <a class="rn-btn btn" target="_blank"
+                href="https://themeforest.net/checkout/from_item/33188244?license=regular">
+                <span>BUY NOW</span>
+              </a>
+            </form>
+          </ul>
+          
+        </div>
+      </div>
+    </div>
+    </div>
+  </nav>
+
+  <div>
+    <p class="l-spacing">
+      WELCOME TO MY WORLD
+    </p>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-6 col-sm-12 col-12"></div>
+
+  </div>
+  <div class="text-slider">
+    <span class="intro"> Hi, I’m <span class="color">Jone Lee a</span><br></span>
+    <span class="text">Professional Coder.</span>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const textElement = document.querySelector('.text');
+      const textToDelete = "Professional Coder.";
+      const textToAdd = "Developer.";
+      const typingSpeed = 100;
+      const deletingSpeed = 20;
+      const pauseDuration = 1000;
+
+      let currentIndex = 0;
+      let isDeleting = true;
+
+      function updateText() {
+        if (isDeleting) {
+        
+          textElement.textContent = textToDelete.substring(0, textToDelete.length - currentIndex);
+          currentIndex++;
+          if (currentIndex > textToDelete.length) {
+            currentIndex = 0;
+            isDeleting = false;
+            textElement.classList.remove('typing');
+            textElement.classList.add('deleting');
+            setTimeout(updateText, pauseDuration); 
+          } else {
+            setTimeout(updateText, deletingSpeed);
+          }
+        } else {
+          textElement.textContent = textToAdd.substring(0, currentIndex);
+          currentIndex++;
+          if (currentIndex > textToAdd.length) {
+            currentIndex = 0;
+            isDeleting = true;
+            textElement.classList.remove('deleting');
+            textElement.classList.add('typing');
+            setTimeout(updateText, pauseDuration);
+          } else {
+            setTimeout(updateText, typingSpeed);
+          }
+        }
+      }
+
+
+      textElement.classList.add('typing');
+
+      updateText();
+    });
+
+  </script>
+
+  <div class="display-flex">
+    <p class="description">I use animation as a third dimension by which to simplify experiences and kuiding thro each
+      and every interaction. I’m not adding motion just to spruce things up, but doing it in ways that.</p>
+
+    <div class="box">
+      <img class="img" src="media/banner-01.png" alt="">
+    </div>
+  </div>
+
+
+  <div class="d-flex">
+    <div class="mt">
+      <p class="h">FIND WITH ME</p>
+      <div class="margin1">
+        <span class="box1">
+          <a href=""><img class="icon" src="media/facebook-brands-solid.svg" alt=""></a></span>
+        <span class="box1"><a href=""><img class="icon" src="media/instagram-brands-solid.svg" alt=""></a></span>
+        <span class="box1"><a href=""><img class="icon" src="media/linkedin-brands-solid.svg" alt=""></a></span>
+      </div>
+    </div>
+
+
+    <div class="mt space">
+      <p class="h ml">BEST SKILLS ON</p>
+      <span class="box2"><img class="icon" src="media/iconsin-01.png" alt=""></span>
+      <span class="box2"><img class="icon" src="media/diamond-02.png" alt=""></span>
+      <span class="box2"><img class="icon" src="media/figma-03.png" alt=""></span>
+    </div>
+
+  </div>
+
+  <hr class="line">
+
+
+  <div class="s2">
+    <div class="subtitle">FEATURES</div>
+    <h1 class="title mt-3">What I Do</h1>
+  </div>
+
+
+
+
+  <div class="padding mx-auto mt-5">
+
+    <div class="s2-box box-hover">
+      <span class="w-25">
+        <div class="m">
+          <svg class="s2-icon w-25" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-menu">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </div>
+        <div class="m">
+          <h4 class="heading">Business Strategy</h4>
+        </div>
+        <div class="m">
+          <p class="statement">I throw myself down among the tall grass by the stream as I lie close to the earth.</p>
+        </div>
+      </span>
+    </div>
+
+    <div class="s2-box box-hover">
+      <span class="w-25">
+        <div class="m">
+          <svg class="s2-icon w-25" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-book-open">
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+          </svg>
+        </div>
+        <div class="m">
+          <h4 class="heading">App Development</h4>
+        </div>
+        <div class="m">
+          <p class="statement">It uses a dictionary of over 200 Latin words, combined with a handful of model sentence.
+          </p>
+        </div>
+      </span>
+    </div>
+
+
+    <div class="s2-box box-hover">
+      <span class="w-25">
+        <div class="m">
+          <svg class="s2-icon w-25" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-tv">
+            <rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect>
+            <polyline points="17 2 12 7 7 2"></polyline>
+          </svg>
+        </div>
+        <div class="m">
+          <h4 class="heading">App Development</h4>
+        </div>
+        <div class="m">
+          <p class="statement">I throw myself down among the tall grass by the stream as I lie close to the earth.</p>
+        </div>
+      </span>
+    </div>
+
+  </div>
+
+  <div class="padding mx-auto mt-5">
+
+    <div class="s2-box box-hover">
+      <span class="w-25">
+        <div class="m">
+          <svg class="s2-icon w-25" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-twitch">
+            <path d="M21 2H3v16h5v4l4-4h5l4-4V2zm-10 9V7m5 4V7"></path>
+          </svg>
+        </div>
+        <div class="m">
+          <h4 class="heading">Mobile App</h4>
+        </div>
+        <div class="m">
+          <p class="statement">There are many variations of passages of Lorem ipsum available, but the majority.</p>
+        </div>
+      </span>
+    </div>
+
+    <div class="s2-box box-hover">
+      <span class="w-25">
+        <div class="m">
+          <svg class="s2-icon w-25" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-wifi">
+            <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
+            <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
+            <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+            <line x1="12" y1="20" x2="12.01" y2="20"></line>
+          </svg>
+        </div>
+        <div class="m">
+          <h4 class="heading">CEO Marketing</h4>
+        </div>
+        <div class="m">
+          <p class="statement">Always free from repetition, injected humor, or non-characteristic words etc.</p>
+        </div>
+      </span>
+    </div>
+
+
+    <div class="s2-box box-hover">
+      <span class="w-25">
+        <div class="m">
+
+          <svg class="s2-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-slack">
+            <path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z">
+            </path>
+            <path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"></path>
+            <path d="M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z">
+            </path>
+            <path d="M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z"></path>
+            <path d="M14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5z">
+            </path>
+            <path d="M15.5 19H14v1.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"></path>
+            <path d="M10 9.5C10 8.67 9.33 8 8.5 8h-5C2.67 8 2 8.67 2 9.5S2.67 11 3.5 11h5c.83 0 1.5-.67 1.5-1.5z">
+            </path>
+            <path d="M8.5 5H10V3.5C10 2.67 9.33 2 8.5 2S7 2.67 7 3.5 7.67 5 8.5 5z"></path>
+          </svg>
+        </div>
+        <div class="m">
+          <h4 class="heading">Personal Portfolio <br> April</h4>
+        </div>
+        <div class="m">
+          <p class="statement">It uses a dictionary of over 200 Latin words, combined with a handful of model sentence.
+          </p>
+        </div>
+      </span>
+    </div>
+
+  </div>
+
+  <hr class="line">
+
+  <div class="text-center top">
+    <div class="portfolio">VISIT MY PORTFOLIO AND KEEP YOUR FEEDBACK</div>
+    <h1 class="p-heading">My Portfolio</h1>
+  </div>
+
+
+  <div class="padding mx-auto mt-5">
+
+    <div class="s2-box rounded-4">
+      <span class="w-25">
+        <div class="m">
+          <img class="p-img w-100 rounded-3" src="media/portfolio-01.jpg" alt="">
+        </div>
+        <div class="t d-flex mt-5">
+          <span class="t">DEVELOPMENT</span>
+          <span class="t text-dark left"><img src="media/like.svg" alt=""> 600</span>
+        </div>
+        <div class="w-100 des">The services provide for design</div>
+      </span>
+    </div>
+
+    <div class="s2-box rounded-4">
+      <span class="w-25">
+        <div class="m">
+          <img class="p-img w-100 rounded-3" src="media/portfolio-02.jpg" alt="">
+        </div>
+        <div class="t d-flex mt-5">
+          <span class="t">APPLICATION</span>
+          <span class="t text-dark left"><img src="media/like.svg" alt=""> 750</span>
+        </div>
+        <div class="w-100 des">Mobile app landing design & app maintain</div>
+      </span>
+    </div>
+
+    <div class="s2-box rounded-4">
+      <span class="w-25">
+        <div class="m">
+          <img class="p-img w-100 rounded-3" src="media/portfolio-03.jpg" alt="">
+        </div>
+        <div class="t d-flex mt-5">
+          <span class="t">PHOTOSHOP</span>
+          <span class="t text-dark left"><img src="media/like.svg" alt=""> 630</span>
+        </div>
+        <div class="w-100 des">Logo design creativity & Application</div>
+      </span>
+    </div>
+
+
+  </div>
+
+  <div class="padding mx-auto mt-5">
+
+    <div class="s2-box rounded-4">
+      <span class="w-25">
+        <div class="m">
+          <img class="p-img w-100 rounded-3" src="media/portfolio-04.jpg" alt="">
+        </div>
+        <div class="t d-flex mt-5">
+          <span class="t">FIGMA</span>
+          <span class="t text-dark left"><img src="media/like.svg" alt=""> 360</span>
+        </div>
+        <div class="w-100 des">Mobile app landing design & Services</div>
+      </span>
+    </div>
+
+    <div class="s2-box rounded-4">
+      <span class="w-25">
+        <div class="m">
+          <img class="p-img w-100 rounded-3" src="media/portfolio-05.jpg" alt="">
+        </div>
+        <div class="t d-flex mt-5">
+          <span class="t">WEB DESIGN</span>
+          <span class="t text-dark left"><img src="media/like.svg" alt=""> 280</span>
+        </div>
+        <div class="w-100 des">Design for technology & services</div>
+      </span>
+    </div>
+
+    <div class="s2-box rounded-4">
+      <span class="w-25">
+        <div class="m">
+          <img class="p-img w-100 rounded-3" src="media/portfolio-06.jpg" alt="">
+        </div>
+        <div class="t d-flex mt-5">
+          <span class="t">WEB DESIGN</span>
+          <span class="t text-dark left"><img src="media/like.svg" alt=""> 690</span>
+        </div>
+        <div class="w-100 des">App for tecnology & services</div>
+      </span>
+    </div>
+
+  </div>
+
+
+  <hr class="line">
+
+  <div class="text-center top">
+    <div class="portfolio">7+ YEARS OF EXPERIENCE</div>
+    <h1 class="p-heading">My Resume</h1>
+  </div>
+
+  <div class="btn-top">
+    <a class="text-decoration-none red-color  font" href="">Education</a>
+    <a class="text-decoration-none  font" href="">Professional Skills</a>
+    <a class="text-decoration-none  font" href="">Experience</a>
+    <a class="text-decoration-none font" href="">Interview</a>
+  </div>
+
+
+  <div class="d-flex width">
+
+    <div>
+      <div class="margin">
+        <div class="date">2007 - 2010</div>
+        <div>
+          <h1 class="heading1">Education Quality</h1>
+        </div>
+      </div>
+      <div>
+        <div class="s2-box mt-5 hover-me">
+          <span class="w-50">
+            <div class="m topp d-flex">
+              <div>
+                <h4 class="h4">Personal Portfolio April Fools</h4>
+                <p class="p-date">University of DVI (1997 - 2001)</p>
+              </div>
+              <div>
+                <div class="rate-box">4.30/5</div>
+              </div>
+            </div>
+            <hr class="mt-4">
+            <div>
+              <p class="description2">The education should be very interactual. Ut tincidunt est ac dolor aliquam
+                sodales. Phasellus sed
+                mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante.</p>
+            </div>
+          </span>
+        </div>
+
+      </div>
+
+
+      <div>
+        <div class="s2-box mt-5 hover-me">
+          <span class="w-50">
+            <div class="m topp d-flex">
+              <div>
+                <h4 class="h4">Examples Of Personal <br> Portfolio</h4>
+                <p class="p-date">College of Studies (2000 - 2002)</p>
+              </div>
+              <div>
+                <div class="rate-box">4.50/5</div>
+              </div>
+            </div>
+            <hr class="mt-4">
+            <div>
+              <p class="description2">Maecenas finibus nec sem ut imperdiet. Ut tincidunt est ac dolor aliquam sodales.
+                Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante.</p>
+            </div>
+          </span>
+        </div>
+
+      </div>
+
+
+      <div>
+        <div class="s2-box mt-5 hover-me">
+          <span class="w-50">
+            <div class="m topp d-flex">
+              <div>
+                <h4 class="h4">Tips For Personal Portfolio</h4>
+                <p class="p-date">University of Studies (1997 - 2001)</p>
+              </div>
+              <div>
+                <div class="rate-box">4.80/5</div>
+              </div>
+            </div>
+            <hr class="mt-4">
+            <div>
+              <p class="description2">If you are going to use a passage. Ut tincidunt est ac dolor aliquam sodales.
+                Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante.</p>
+            </div>
+          </span>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div>
+
+      <div>
+        <div class="margin">
+          <div class="date">2007 - 2010</div>
+          <div>
+            <h1 class="heading1">Job Experience</h1>
+          </div>
+        </div>
+        <div class="s2-box mt-5 hover-me">
+          <span class="w-50">
+            <div class="m topp d-flex">
+              <div>
+                <h4 class="h4">Diploma in Web Development</h4>
+                <p class="p-date">BSE In CSE (2004 - 2008)</p>
+              </div>
+              <div>
+                <div class="rate-box ms-5">4.70/5</div>
+              </div>
+            </div>
+            <hr class="mt-4">
+            <div>
+              <p class="description2">Contrary to popular belief. Ut tincidunt est ac dolor aliquam sodales. Phasellus
+                sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante.</p>
+            </div>
+          </span>
+        </div>
+
+      </div>
+
+      <div>
+        <div class="s2-box mt-5 hover-me">
+          <span class="w-50">
+            <div class="m topp d-flex">
+              <div>
+                <h4 class="h4">The Personal Portfolio <br> Mystery</h4>
+                <p class="p-date">Job at Rainbow-Themes (2008 - 2016)</p>
+              </div>
+              <div>
+                <div class="rate-box">4.95/5</div>
+              </div>
+            </div>
+            <hr class="mt-4">
+            <div>
+              <p class="description2">Generate Lorem Ipsum which looks. Ut tincidunt est ac dolor aliquam sodales.
+                Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante.</p>
+            </div>
+          </span>
+        </div>
+
+      </div>
+
+      <div>
+        <span>
+          <div class="s2-box mt-5 hover-me">
+            <div class="hover">
+              <span class="w-50">
+                <div class="m topp d-flex">
+                  <div>
+                    <h4 class="h4">Diploma in Computer Science</h4>
+                    <p class="p-date">Works at Plugin Development (2016 - 2020)</p>
+                  </div>
+                  <div>
+                    <div class="rate-box">4.95/5</div>
+                  </div>
+                </div>
+                <hr class="mt-4">
+                <div>
+                  <p class="description2">Maecenas finibus nec sem ut imperdiet. Ut tincidunt est ac dolor aliquam
+                    sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante.</p>
+                </div>
+              </span>
+            </div>
+          </div>
+        </span>
+      </div>
+
+    </div>
+  </div>
+
+  <hr class="line">
+
+  <div class="text-center top">
+    <div class="portfolio">WHAT CLIENTS SAY</div>
+    <h1 class="p-heading">Testimonial</h1>
+  </div>
+
+
+  <!-- carousal -->
+
+  <div class="carousel">
+    <div class="carousel-container">
+      <div class="carousel-slide s2-box">
+        <div class="carousel-image">
+          <img src="media/final-home--1st.png" alt="Image 1">
+        </div>
+        <div class="carousel-text">
+          <p>Your text for the first image.</p>
+        </div>
+      </div>
+      <div class="carousel-slide">
+        <div class="carousel-image">
+          <img src="media/final-home--2nd.png" alt="Image 2">
+        </div>
+        <div class="carousel-text">
+          <p>Your text for the second image.</p>
+        </div>
+      </div>
+      <div class="carousel-slide">
+        <div class="carousel-image">
+          <img src="media/final-home--3rd.png" alt="Image 3">
+        </div>
+        <div class="carousel-text">
+          <p>Your text for the third image.</p>
+        </div>
+      </div>
+      <div class="carousel-slide">
+        <div class="carousel-image">
+          <img src="media/final-home--4th.png" alt="Image 4">
+        </div>
+        <div class="carousel-text">
+          <p>Your text for the fourth image.</p>
+        </div>
+      </div>
+      <div class="carousel-slide">
+        <div class="carousel-image">
+          <img src="media/final-home--5th.png" alt="Image 5">
+        </div>
+        <div class="carousel-text">
+          <p>Your text for the fifth image.</p>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-dots">
+      <span class="dot" data-index="0"></span>
+      <span class="dot" data-index="1"></span>
+      <span class="dot" data-index="2"></span>
+      <span class="dot" data-index="3"></span>
+      <span class="dot" data-index="4"></span>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const container = document.querySelector('.carousel-container');
+      const slides = document.querySelectorAll('.carousel-slide');
+      const dots = document.querySelectorAll('.dot');
+      let currentIndex = 0;
+
+      function updateCarousel(index) {
+        if (index >= slides.length) index = 0;
+        if (index < 0) index = slides.length - 1;
+
+        container.style.transform = `translateX(-${index * 100}%)`;
+
+        dots.forEach(dot => dot.classList.remove('active'));
+        dots[index].classList.add('active');
+
+        currentIndex = index;
+      }
+
+      dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+          const newIndex = parseInt(dot.getAttribute('data-index'));
+          updateCarousel(newIndex);
+        });
+      });
+
+      // Initialize the carousel to show the first slide
+      updateCarousel(0);
+    });
+  </script>
+
+  <hr class="line">
+
+  <div class="text-center top">
+    <div class="portfolio">VISIT MY BLOG & KEEP YOUR FEEDBACK</div>
+    <h1 class="p-heading">My Blog</h1>
+  </div>
+
+
+  <div class="padding mx-auto mt-5">
+
+    <div class="s2-box rounded-4">
+      <span class="w-25">
+        <div class="m">
+          <img class="p-img w-100 rounded-3" src="media/blog-01.jpg" alt="">
+        </div>
+        <div class="t d-flex mt-5">
+          <span class="t">CANADA</span>
+          <span class="t text-dark left"><img src="" alt=""> 360</span>
+        </div>
+        <div class="w-100 des">T-shirt design is the part of design</div>
+      </span>
+    </div>
+
+    <div class="s2-box rounded-4">
+      <span class="w-25">
+        <div class="m">
+          <img class="p-img w-100 rounded-3" src="media/blog-02.jpg" alt="">
+        </div>
+        <div class="t d-flex mt-5">
+          <span class="t">DEVELOPMENT</span>
+          <span class="t text-dark left"><img src="media/like.svg" alt=""> 280</span>
+        </div>
+        <div class="w-100 des">The services provide for design </div>
+      </span>
+    </div>
+
+    <div class="s2-box rounded-4">
+      <span class="w-25">
+        <div class="m">
+          <img class="p-img w-100 rounded-3" src="media/blog-03.jpg" alt="">
+        </div>
+        <div class="t d-flex mt-5">
+          <span class="t">APPLICATION</span>
+          <span class="t text-dark left"><img src="media/like.svg" alt=""> 690</span>
+        </div>
+        <div class="w-100 des">Mobile app landing design & app maintain</div>
+      </span>
+    </div>
+
+  </div>
+
+  <hr class="line">
+
+  <div class="text-center top">
+    <div class="portfolio">CONTACT</div>
+    <h1 class="p-heading">Contact With Me</h1>
+  </div>
+
+
+  <div class="d-flex ml">
+    <div class="s2-box rounded-3 reshape">
+      <span class="w-25">
+        <div class="m">
+          <img class="p-img rounded-3 w-100" src="media/contact1.png" alt="">
+        </div>
+        <h2 class="mt-3">Nevine Acotanza</h2>
+        <div class="mt-3 opacity">Chief Operating Officer</div>
+        <div class="mt-3 opacity">I am available for freelance work. Connect with me via and call in to my account.
+        </div>
+        <div class="mt-3 opacity">Phone: +01234567890</div>
+        <div class="opacity">Email: kashafsiya@gmail.com</div>
+      </span>
+
+      <div class="mt box-bottom">
+        <p class="h">FIND WITH ME</p>
+        <div class="margin1">
+          <span class="box1">
+            <a href=""><img class="icon" src="media/facebook-brands-solid.svg" alt=""></a></span>
+          <span class="box1"><a href=""><img class="icon" src="media/instagram-brands-solid.svg" alt=""></a></span>
+          <span class="box1"><a href=""><img class="icon" src="media/linkedin-brands-solid.svg" alt=""></a></span>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="s2-box mt-5 w-50 rounded-4">
+
+      <form action="/submit" method="post">
+
+        <span class="d-flex">
+          <div class="form-group w-100">
+            <label for="name">YOUR NAME</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+
+          <div class="form-group ms-5 w-100">
+            <label for="name">PHONE NUMBER</label>
+            <input type="tel" id="name" name="name" required>
+          </div>
+        </span>
+
+        <div class="form-group">
+          <label for="email">EMAIL</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">SUBJECT</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">MESSAGE</label>
+          <textarea id="message" name="message" rows="8" required></textarea>
+        </div>
+
+        <span class="submit-btn">
+          <div type="submit">SEND MESSAGE</div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-arrow-right arrow">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </span>
+
+      </form>
+    </div>
+  </div>
+  <hr class="line">
+
+  <div class="text-center f-top">
+    <div>
+      <img src="media/footer logo.png" alt="">
+    </div>
+    <div class="mt-4">
+      <p class="f-description">© 2022. All rights reserved by <a target="_blank"
+          class="text-decoration-none f-description"
+          href="https://themeforest.net/user/rainbow-themes/portfolio">Rainbow-Themes.</a></p>
+    </div>
+  </div>
+</body>
+
+</html>

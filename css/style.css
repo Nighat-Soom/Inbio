@@ -1,0 +1,15 @@
+/* Theme CSS */
+
+/* Navbar Section */
+.logo img {
+    width: 100px;
+}
+
+.bg-mehroon {
+    background-color: #C51F24;
+}
+
+.nav-item .exp-link::before {
+    background-image: url(../media/navicon-explore.png);
+}
+
