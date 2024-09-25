@@ -5,12 +5,17 @@ body{
 }
 
 .close-btn{
-    margin-right: 40px;
-    margin-top: 40px; 
-    box-shadow: 7px 7px 15px #c2cdde, -5px -5px 15px #ffffff;
-    width: 40px;
-    height: 40px;
+    margin-right: 10px;
+    margin-top: 20px; 
+    box-shadow: 7px 7px 15px #3b3c3d, -5px -5px 15px #767272;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
+    transition: 0.3s ease-in-out;
+}
+
+.close-btn:hover{
+    color: #ff014f;
 }
 
 .ml-space{
@@ -178,6 +183,7 @@ body{
     background: linear-gradient(#ff014f , #ff014f);
     cursor: pointer;
     transform: translateY(-5px);
+    transition: transform 0.5s ease;
 }
 
 
@@ -266,17 +272,24 @@ body{
     font-size: 27px;
 }
 
-.s2-box{
+.s2-box {
     background: linear-gradient(145deg, #e2e8ec, #ffffff);
     box-shadow: 5px 5px 15px #D1D9E6, -5px -5px 15px #ffffff;
-    transition: background-color 0.5s, transform 0.5s;
+    transition: background-color 0.9s, transform 0.9s, opacity 0.9s;
     position: relative;
     z-index: 2;
     box-sizing: border-box;
     border-radius: 5px;
     padding: 40px;
     justify-content: space-between;
-    margin-left: 40px; 
+    margin-left: 40px;
+    opacity: 0;
+    transform: translateY(50px); 
+}
+
+.s2-box.visible {
+    opacity: 1;
+    transform: translateY(0); 
 }
 
 .box-hover:hover{
@@ -286,6 +299,10 @@ body{
     transform: translateY(-3px); 
 }
 
+.m {
+    transition: background-color 0.5s ease; 
+    transition: transform 0.7s ease; 
+}
 
 .box-hover:hover .m{
     transform: translateY(-10px);
@@ -294,6 +311,7 @@ body{
 .s2-box:hover .s2-icon{
     color: white;
 }
+
 
 .portfolio{
     font-size: 14px;
@@ -599,13 +617,6 @@ select:focus {
     height: auto;
   }
   
-  .carousel-text {
-    padding: 20px;
-    box-sizing: border-box;
-    background-color: #f9f9f9;
-    text-align: center;
-  }
-  
   .carousel-dots {
     text-align: center;
     margin-top: 50px;
@@ -636,4 +647,250 @@ select:focus {
     font-family: "Poppins", sans-serif;
     color: #636464;
 }
-  
+
+.img-trans:hover{
+    transition: transform 0.4s ease;
+}
+
+.font:focus{
+    color: #ff014f;
+}
+
+.hidden {
+    display: none;
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 10px;
+    width: 91%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.skill-category {
+    width: 50%;
+}
+
+.skill-item {
+    margin-bottom: 20px;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.skill-bar {
+    position: relative;
+    height: 5px;
+}
+
+.skill {
+    position: relative;
+    background: #f3f3f3;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.skill-name {
+    position: relative;
+    z-index: 1;
+}
+
+.skill-percentage {
+    position: relative;
+    z-index: 1;
+    white-space: nowrap;
+}
+
+@keyframes fillSkill {
+    from {
+        width: 0;
+    }
+    to {
+        width: var(--skill-width);
+    }
+}
+
+.skill-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: linear-gradient(to right, #ffffff, #ff014f);
+    z-index: 0;
+    transition: width 0.5s ease;
+    width: 0;
+    animation: fillSkill 1s forwards;
+}
+
+.skill[data-width] .skill-inner {
+    width: var(--skill-width);
+}
+
+.skill[data-width] {
+    --skill-width: attr(data-width);
+}
+
+.style {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 62px;
+    font-family: "Montserrat", sans-serif;
+}
+.size{
+    width: 150px;
+}
+.box-size{
+    width: 70px;
+    margin-top: 130px;  
+}
+.name{
+    margin-top: 10px;
+    line-height: 34px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+}
+.about{
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    opacity: 0.8;
+}
+.test-title{
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    line-height: 1.14;
+    word-break: break-word;
+    opacity: 0.9;
+    font-family: "Poppins", sans-serif;
+}
+.quote{
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    margin-left: 650px;
+    margin-top: 30px;
+    opacity: 0.4;
+}
+.arrowss{
+    position: absolute;
+    margin-left: 800px;
+    margin-top: 80px;
+    display: flex; 
+}
+.arrow-box{
+    padding: 20px;
+}
+.arrow-box:hover{
+    background: linear-gradient(#ff014f, #db0545);
+    color: white;
+    transition: 0.5s ease-in-out;
+    color: #D1D9E6;
+}
+
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: none; 
+}
+
+.floating-arrow {
+    color: #ff014f;
+    background: linear-gradient(145deg, #e2e8ec, #ffffff);
+    transition: 0.4s ease;
+    padding: 15px;
+    box-shadow: 7px 7px 15px #c2cdde, -5px -5px 15px #ffffff;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+}
+.floating-arrow:hover{
+    background: linear-gradient(#ff014f, #db0545);
+    color: white;
+    cursor: pointer;
+}
+
+.floating-btn {
+    position: fixed;
+    right: -7px;
+    bottom: 250px;
+    z-index: 9999;
+    width: 50px;
+    height: 140px;
+    background: linear-gradient(145deg, #e2e8ec, #ffffff);
+    border-radius: 7px;
+    box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+    cursor: pointer;
+}
+
+.floating-btn:hover {
+    background: linear-gradient(145deg, #d1d9dc, #ffffff);
+}
+
+.floating-btn span {
+    color: #ff014f;
+}
+
+#imageSection {
+    position: fixed;
+    top: 0;
+    right: -100%; 
+    width: 100%;
+    height: 100%; 
+    background: #000000cc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    transition: right 0.4s ease, opacity 0.4s ease; 
+   
+}
+
+#imageSection.visible {
+    right: 0; 
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10001; 
+}
+#imageSection img {
+    max-width: 90%;
+    margin: 10px 0;
+}
+.demo-heading, .demo-description{
+    color: white;
+}
+.d-width{
+    width: 100px;
+    height: 100px;
+}
+.demo-section{
+    width: 90%;
+    border-radius: 10px;
+    margin-top: -200px;
+    box-shadow: 7px 7px 15px #303131, -5px -5px 15px #3f3c3c;
+}
